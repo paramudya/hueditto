@@ -1,43 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            width: 300px;
-            padding: 10px;
-            font-family: Arial, sans-serif;
-        }
-        #output {
-            width: 100%;
-            min-height: 100px;
-            margin: 10px 0;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-        }
-        #status {
-            color: red;
-            margin-bottom: 10px;
-        }
-        button {
-            width: 100%;
-            padding: 8px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="circular-button">Fix em</button>
     <div id="status"></div>
-    <textarea id="output" placeholder="Text will appear here..." readonly></textarea>
-    <button id="readText">Read Text</button>
+    <div class="textarea-container">
+        <textarea id="output" placeholder="Text will appear here..." readonly></textarea>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
