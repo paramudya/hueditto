@@ -7,4 +7,12 @@
 
 ### version
 v0.0 (24/12/24): 
-    - jit for christmas: gpt 4o's powered sql query fixer. tested for a couple of queries, works okay. non streaming, no copy button yet
+    - jit for christmas: gpt 4o's powered sql query fixer, server working on local office computer (mine) at the address http://127.0.0.1:5000
+    - tested for a couple of queries, works okay. 
+    - no streaming, no copy button, no queue yet
+
+v0.1 (in progress): 
+    - copy button
+    - server queue ongoing
+    - streaming ongoing
+    - model pick maybe on this ver maybe later

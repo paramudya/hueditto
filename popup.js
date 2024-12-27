@@ -1,4 +1,30 @@
 const outputArea = document.getElementById('output');
+const statusDiv = document.getElementById('status');
+
+const copyButton = document.getElementById('copyButton');
+const copyIcon = copyButton.querySelector('.copy-icon');
+const checkIcon = copyButton.querySelector('.check-icon');
+
+copyButton.addEventListener('click', async () => {
+    try {
+        const textToCopy = outputArea.textContent;
+        await navigator.clipboard.writeText(textToCopy);
+        
+        // Hide copy icon, show check icon
+        copyIcon.classList.add('hidden');
+        checkIcon.classList.remove('hidden');
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+            copyIcon.classList.remove('hidden');
+            checkIcon.classList.add('hidden');
+        }, 2000);
+        
+    } catch (error) {
+        console.error('Copy failed:', error);
+        updateStatus('Failed to copy text', true);
+    }
+});
 
 // popup.js
 document.addEventListener('DOMContentLoaded', () => {

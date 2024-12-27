@@ -5,12 +5,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="circular-button">Fix em</button>
     <div id="status"></div>
     <div class="textarea-container">
-        <!-- <textarea id="output" placeholder="Text will appear here..." readonly></textarea> -->
         <div id="output"></div>
-
+        <div class="button-container">
+            <button class="circular-button">Fix em</button>
+            <button id="copyButton" class="copy-button" aria-label="Copy to clipboard">
+                <div style="width: 16px; height: 16px; position: relative;">
+                    <img src="icons/copy.svg" alt="Copy" class="copy-icon" width="16" height="16">
+                    <img src="icons/check.svg" alt="Copied" class="check-icon hidden" width="16" height="16">
+                </div>
+            </button>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>

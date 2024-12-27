@@ -4,6 +4,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.button-container {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 8px;
+}
+
 .circular-button {
     width: 80px;
     height: 80px;
@@ -16,6 +24,7 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
     transition: all 0.3s ease;
+    margin-left: auto; /* This will push the button to the right */
 }
 
 .circular-button.success {
@@ -82,4 +91,44 @@ code {
 .sql-aggregate {
     color: #9932CC; /* Purple color for aggregate functions */
     font-weight: bold;
+}
+
+.textarea-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.copy-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0;
+    padding: 6px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Add this to position the icons in the same space */
+.copy-button img {
+    position: absolute;
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;  /* Prevent interaction with hidden icon */
+}
+
+.copy-button:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+.copy-button:active {
+    background-color: #e5e5e5;
 }
