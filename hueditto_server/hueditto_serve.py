@@ -1,19 +1,25 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import 
+from process import sqlint,sqlol
+
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/process', methods=['POST'])
 def process_text():
     try:
-        text = request.json['text']
-        # Your text processing logic here
-        processed_text = text.upper()  # Upper as baseline process
+        # Get both query and error from request
+        data = request.json
+        query = data.get('query', '')  # The SQL query text
+        error = data.get('error', '')  # The error message
         
+        # Process both pieces of information
+        fixed_q =  sqlol(query, error)
+        linted_q = sqlint(fixed_q)  # Assuming sqlint is modified to handle both parameters
+
         return jsonify({
             'success': True,
-            'result': processed_text
+            'result': linted_q
         })
     except Exception as e:
         return jsonify({

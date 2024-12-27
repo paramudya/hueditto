@@ -37,10 +37,49 @@ body {
 
 #output {
     width: 100%;
-    min-height: 100px;
+    min-height: 150px;
     margin: 10px 0;
-    padding: 5px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
     border-radius: 4px;
-    resize: vertical;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+
+.sql-keyword {
+    color: #0033b3;
+    font-weight: bold;
+}
+
+.sql-string {
+    color: #067d17;
+}
+
+.sql-number {
+    color: #1750eb;
+}
+
+.sql-comment {
+    color: #808080;
+    font-style: italic;
+}
+
+pre {
+    margin: 0;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.sql-aggregate {
+    color: #9932CC; /* Purple color for aggregate functions */
+    font-weight: bold;
 }
