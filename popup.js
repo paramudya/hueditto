@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.circular-button');
     const statusDiv = document.getElementById('status');
 
-    const API_URL = 'http://127.0.0.1:5000/process';
+    const API_URL = 'http://127.0.0.1:5000/fix';
 
     const updateStatus = (message, isError) => {
         statusDiv.textContent = message;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Function to send text to server
         async function processTextWithServer(text, error) {
-        const response = await fetch('http://localhost:5000/process', {
+        const response = await fetch('http://localhost:5000/fix', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

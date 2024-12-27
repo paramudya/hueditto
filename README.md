@@ -10,9 +10,12 @@ v0.0 (24/12/24):
     - jit for christmas: gpt 4o's powered sql query fixer, server working on local office computer (mine) at the address http://127.0.0.1:5000
     - tested for a couple of queries, works okay. 
     - no streaming, no copy button, no queue yet
+    - interface still hideous
 
 v0.1 (in progress): 
-    - copy button
-    - server queue ongoing
-    - streaming ongoing
-    - model pick maybe on this ver maybe later
+    - priority: is there any way to get all the queries (not just ones displayed on the screen)
+    - copy button ✅
+    - server queue ⏱️
+    - streaming ⏱️
+    - model pick 🤔 (maybe this ver maybe later)
+    - deetect hive/impala for better query fix 🤔 (maybe this ver maybe later)

@@ -5,7 +5,7 @@ from process import sqlint,sqlol
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/process', methods=['POST'])
+@app.route('/fix', methods=['POST'])
 def process_text():
     try:
         # Get both query and error from request

@@ -12,7 +12,7 @@ openai_api = os.getenv('OPENAI_API_KEY')
 
 def openai_call(user_prompt: str, 
                 model: str = 'gpt-4o',
-                system_prompt: str = 'You are to fix an SQL query based on the given error (if any).'
+                system_prompt: str = 'You are to fix an SQL query based on the given error. You only generate the SQL query.'
                 ) -> str:
     ope_client = OpenAI(api_key=openai_api) # prolly not the most efficient way to initiate everytime a prompt called
 
@@ -42,6 +42,7 @@ def sqlol(sql_query: str, error: str) -> str:
     prompt = f'''query: {sql_query}, error: {error}'''
      
     full_ans = llm_call('gpt-4o', prompt)
+    print('full ans:', full_ans)
     fixxx = parse_sql(full_ans)
 
     return fixxx
